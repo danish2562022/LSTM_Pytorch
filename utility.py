@@ -85,3 +85,8 @@ if __name__ == '__main__':
     print(line_to_tensor('Jones').size())  # [5, 1, 57]
     print(line_to_tensor('Jones'))
     print(all_categories)
+
+    input_tensor = letter_to_tensor("A")
+    hidden_tensor =torch.zeros(1,128)
+    combined = torch.cat((input_tensor, hidden_tensor), 1)
+    print(combined)
